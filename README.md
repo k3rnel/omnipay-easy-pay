@@ -31,18 +31,14 @@ Or you can simply run
 
 ## Basic Usage
 
-1. Use Omnipay gateway and EasyPay gateway classes:
+1. Initialize EasyPay gateway:
 
 ```php
+
     use Omnipay\Omnipay;
     use Omnipay\EasyPay\EasyPayGateway;
-```
 
-2. Initialize EasyPay gateway:
-
-```php
-
-    $gateway = Omnipay::create(EasyPay::class);
+    $gateway = Omnipay::create(EasyPayGateway::class);
     $gateway->setMerchantId('12345678'); // E-Merchant unique ID provided by EasyPay after being integrated
     $gateway->setMerchantToken('8f11efa4-4041-4e28-a191-0cc01c4ff66c'); // Merchant token (key) provided by EasyPay after being integrated
 
@@ -62,7 +58,7 @@ Or you can simply run
 
 ```php
 
-    $gateway = Omnipay::create(EasyPay::class);
+    $gateway = Omnipay::create(EasyPayGateway::class);
     $gateway->setMerchantId('12345678');
     $gateway->setMerchantToken('8f11efa4-4041-4e28-a191-0cc01c4ff66c');
     
