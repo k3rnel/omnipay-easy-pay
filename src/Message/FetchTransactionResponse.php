@@ -50,6 +50,14 @@ class FetchTransactionResponse extends AbstractResponse
     }
 
     /**
+     * @return bool
+     */
+    public function isPaid(): bool
+    {
+        return $this->getStatus() === TransactionStatus::PAID;
+    }
+
+    /**
      * @return \Omnipay\EasyPay\Enums\TransactionStatus|null
      */
     public function getStatus(): ?TransactionStatus
