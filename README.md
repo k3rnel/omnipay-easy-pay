@@ -6,7 +6,7 @@
 [![Total Downloads](https://poser.pugx.org/k3rnel/omnipay-easy-pay/d/total.png)](https://packagist.org/packages/k3rnel/omnipay-easy-pay)
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework-agnostic, multi-gateway payment
-processing library for PHP 5.5+. This package implements Arca support for Omnipay.
+processing library for PHP 5.5+. This package implements EasyPay support for Omnipay.
 
 ## Installation
 
@@ -38,7 +38,7 @@ Or you can simply run
     use Omnipay\EasyPay\EasyPayGateway;
 ```
 
-2. Initialize Arca gateway:
+2. Initialize EasyPay gateway:
 
 ```php
 
@@ -48,7 +48,7 @@ Or you can simply run
 
 ```
 
-3. Call purchase, it will automatically redirect to Arca's hosted page
+3. Call purchase, it will automatically redirect to EasyPay's hosted page
 
 ```php
 
@@ -90,5 +90,5 @@ If you want to keep up to date with release announcements, discuss ideas for the
 or ask more detailed questions, there is also a [mailing list](https://groups.google.com/forum/#!forum/omnipay) which
 you can subscribe to.
 
-If you believe you have found a bug, please report it using the [GitHub issue tracker](https://github.com/k3rnel/omnipay-arca/issues),
+If you believe you have found a bug, please report it using the [GitHub issue tracker](https://github.com/k3rnel/omnipay-easy-pay/issues),
 or better yet, fork the library and submit a pull request.
