@@ -25,6 +25,12 @@ class FetchTransactionRequest extends AbstractRequest
         return self::API_ENDPOINT.'/checkorder';
     }
 
+    /**
+     * @param \Psr\Http\Message\ResponseInterface $response
+     *
+     * @return \Omnipay\EasyPay\Message\AbstractResponse
+     * @throws \JsonException
+     */
     protected function createResponse(PsrResponseInterface $response): AbstractResponse
     {
         $data = [
@@ -32,7 +38,7 @@ class FetchTransactionRequest extends AbstractRequest
         ];
 
         if ($response->getStatusCode() === Response::HTTP_OK) {
-            $responseData = json_decode($response->getBody(), JSON_THROW_ON_ERROR);
+            $responseData = json_decode($response->getBody()->getContents(), associative: true, flags: JSON_THROW_ON_ERROR);
 
             if (is_string($responseData)) {
                 if ($responseData === 'Unauthorized') {

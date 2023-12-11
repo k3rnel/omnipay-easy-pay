@@ -46,13 +46,18 @@ class PurchaseRequest extends AbstractRequest
      * @param \Psr\Http\Message\ResponseInterface $response
      *
      * @return \Omnipay\EasyPay\Message\PurchaseResponse
+     * @throws \JsonException
      */
     protected function createResponse(ResponseInterface $response): PurchaseResponse
     {
         $data = [];
 
         if ($response->getStatusCode() === Response::HTTP_OK) {
-            $responseData = json_decode($response->getBody(), JSON_THROW_ON_ERROR);
+            $responseData = json_decode(
+                $response->getBody()->getContents(),
+                associative: true,
+                flags: JSON_THROW_ON_ERROR
+            );
 
             if (is_string($responseData)) {
                 if ($responseData === 'Unauthorized') {
