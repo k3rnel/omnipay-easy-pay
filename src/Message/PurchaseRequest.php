@@ -53,25 +53,19 @@ class PurchaseRequest extends AbstractRequest
         $data = [];
 
         if ($response->getStatusCode() === Response::HTTP_OK) {
-            $responseData = json_decode(
-                $response->getBody()->getContents(),
-                associative: true,
-                flags: JSON_THROW_ON_ERROR
-            );
+            $responseData = trim($response->getBody()->getContents(), '"');
 
-            if (is_string($responseData)) {
-                if ($responseData === 'Unauthorized') {
-                    $data['success'] = false;
-                    $data['response'] = 'Unauthorized';
-                } else {
-                    $queryString = parse_url($responseData, PHP_URL_QUERY);
+            if ($responseData === 'Unauthorized') {
+                $data['success'] = false;
+                $data['response'] = 'Unauthorized';
+            } else {
+                $queryString = parse_url($responseData, PHP_URL_QUERY);
 
-                    parse_str($queryString, $queryParams);
+                parse_str($queryString, $queryParams);
 
-                    $data['success'] = true;
-                    $data['response'] = $responseData;
-                    $data['id'] = $queryParams['id'] ?? null;
-                }
+                $data['success'] = true;
+                $data['response'] = $responseData;
+                $data['id'] = $queryParams['id'] ?? null;
             }
         }
 

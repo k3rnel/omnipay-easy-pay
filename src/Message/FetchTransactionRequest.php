@@ -38,15 +38,13 @@ class FetchTransactionRequest extends AbstractRequest
         ];
 
         if ($response->getStatusCode() === Response::HTTP_OK) {
-            $responseData = json_decode($response->getBody()->getContents(), associative: true, flags: JSON_THROW_ON_ERROR);
+            $responseData = trim($response->getBody()->getContents(), '"');
 
-            if (is_string($responseData)) {
-                if ($responseData === 'Unauthorized') {
-                    $data['response'] = 'Unauthorized';
-                } else {
-                    $data['success'] = true;
-                    $data['status'] = $responseData;
-                }
+            if ($responseData === 'Unauthorized') {
+                $data['response'] = 'Unauthorized';
+            } else {
+                $data['success'] = true;
+                $data['status'] = $responseData;
             }
         }
 
