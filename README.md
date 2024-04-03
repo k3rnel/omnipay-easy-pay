@@ -1,6 +1,6 @@
 # Omnipay: EasyPay
 
-**EasyPay driver for the Omnipay Laravel payment processing library**
+**[EasyPay](https://www.easypay.am/en) driver for the Omnipay Laravel payment processing library**
 
 [![Latest Stable Version](https://poser.pugx.org/k3rnel/omnipay-easy-pay/version.png)](https://packagist.org/packages/k3rnel/omnipay-easy-pay)
 [![Total Downloads](https://poser.pugx.org/k3rnel/omnipay-easy-pay/d/total.png)](https://packagist.org/packages/k3rnel/omnipay-easy-pay)
@@ -10,7 +10,7 @@ processing library for PHP 5.5+. This package implements EasyPay support for Omn
 
 ## Installation
 
-Omnipay is installed via [Composer](http://getcomposer.org/). To install, simply add it
+Omnipay is installed via [Composer](http://getcomposer.org/). To install, add it
 to your `composer.json` file:
 
 ```json
@@ -21,11 +21,11 @@ to your `composer.json` file:
 }
 ```
 
-And run composer to update your dependencies:
+Run composer to update your dependencies:
 
     composer update
 
-Or you can simply run
+Or you can run
 
     composer require k3rnel/omnipay-easy-pay
 
