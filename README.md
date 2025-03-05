@@ -2,15 +2,14 @@
 
 **[EasyPay](https://www.easypay.am/en) driver for the Omnipay Laravel payment processing library**
 
-[![Latest Stable Version](https://poser.pugx.org/k3rnel/omnipay-easy-pay/version.png)](https://packagist.org/packages/k3rnel/omnipay-easy-pay)
-[![Total Downloads](https://poser.pugx.org/k3rnel/omnipay-easy-pay/d/total.png)](https://packagist.org/packages/k3rnel/omnipay-easy-pay)
+[![Latest Stable Version](https://poser.pugx.org/k3rnel/omnipay-easy-pay/v)](https://packagist.org/packages/k3rnel/omnipay-easy-pay) [![Total Downloads](https://poser.pugx.org/k3rnel/omnipay-easy-pay/downloads)](https://packagist.org/packages/k3rnel/omnipay-easy-pay) [![Latest Unstable Version](https://poser.pugx.org/k3rnel/omnipay-easy-pay/v/unstable)](https://packagist.org/packages/k3rnel/omnipay-easy-pay) [![License](https://poser.pugx.org/k3rnel/omnipay-easy-pay/license)](https://packagist.org/packages/k3rnel/omnipay-easy-pay) [![PHP Version Require](https://poser.pugx.org/k3rnel/omnipay-easy-pay/require/php)](https://packagist.org/packages/k3rnel/omnipay-easy-pay)
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework-agnostic, multi-gateway payment
 processing library for PHP 5.5+. This package implements EasyPay support for Omnipay.
 
 ## Installation
 
-Omnipay is installed via [Composer](http://getcomposer.org/). To install, add it
+Omnipay is installed via [Composer](https://getcomposer.org/). To install, add it
 to your `composer.json` file:
 
 ```json
@@ -79,8 +78,8 @@ repository.
 ## Support
 
 If you are having general issues with Omnipay, we suggest posting on
-[Stack Overflow](http://stackoverflow.com/). Be sure to add the
-[omnipay tag](http://stackoverflow.com/questions/tagged/omnipay) so it can be easily found.
+[Stack Overflow](https://stackoverflow.com/). Be sure to add the
+[omnipay tag](https://stackoverflow.com/questions/tagged/omnipay) so it can be easily found.
 
 If you want to keep up to date with release announcements, discuss ideas for the project,
 or ask more detailed questions, there is also a [mailing list](https://groups.google.com/forum/#!forum/omnipay) which
